@@ -28,8 +28,9 @@ jobs:
         run: |
           npm i
           npm run build --prod
-      - name: Push Build to Releases
-        uses: danils123/Profesional-Portfolio/releases@v1.1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
-          artifacts: "dist/angular-githubaction/*"
-          token: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
