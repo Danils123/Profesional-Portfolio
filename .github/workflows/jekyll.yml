@@ -30,7 +30,7 @@ jobs:
           npm i
           npm run build --prod
       - name: Push Build to Releases
-        uses: danils123/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/angular-githubaction/*"
           token: ${{ secrets.TOKEN }}
