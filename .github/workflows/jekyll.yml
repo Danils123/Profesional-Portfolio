@@ -29,4 +29,8 @@ jobs:
         run: |
           npm i
           npm run build --prod
-          ngh
+      - name: Push Build to Releases
+        uses: danils123/release-action@v1
+        with:
+          artifacts: "dist/angular-githubaction/*"
+          token: ${{ secrets.TOKEN }}
