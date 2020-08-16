@@ -26,7 +26,8 @@
   background-size: cover;
 }
 #imageSide {
-  background: url("../../../assets/img/pexels-photo-40120.jpg");
+  background: url("../../../assets/img/pexels-photo-40120.jpg") center center
+    no-repeat;
 }
 .credit {
   margin-top: 3rem;
