@@ -8,10 +8,22 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactmeComponent } from './components/contactme/contactme.component';
+import { UnderconstructionModule } from '../underconstruction/underconstruction.module';
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, AboutmeComponent, ProjectsComponent, ExperienceComponent, ContactmeComponent],
-  imports: [CommonModule, RouterModule.forRoot(HOMEROUTES)],
+  declarations: [
+    HomeComponent,
+    BannerComponent,
+    AboutmeComponent,
+    ProjectsComponent,
+    ExperienceComponent,
+    ContactmeComponent,
+  ],
+  imports: [
+    CommonModule,
+    UnderconstructionModule,
+    RouterModule.forRoot(HOMEROUTES),
+  ],
   exports: [RouterModule],
 })
 export class HomeModule {}
