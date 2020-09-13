@@ -1,4 +1,37 @@
-<div class="container has-text-centered">
-  <h1 class="title is-1">Daniel Ramírez</h1>
-  <h2 class="subtitle is-4">Web Developer</h2>
+<div class="b-dark w100 h100" id="container">
+  <div id="numbers" class="w100 h100">
+    <div class="container has-text-centered w100 h100" id="copy">
+      <h1>
+        <p class="">
+          {{ titleA }}
+          <span
+            *ngIf="titleA.length > 1 && textList[0].length !== titleA.length"
+          ></span>
+        </p>
+        &nbsp;
+        <p class="">
+          {{ titleB }}
+          <span
+            *ngIf="
+              textList[0].length === titleA.length &&
+              textList[1].length !== titleB.length
+            "
+          ></span>
+        </p>
+      </h1>
+      <h2 class="">
+        {{ subTitle }}&nbsp;
+        <span
+          *ngIf="textList[1].length === titleA.length || subTitle.length > 1"
+        ></span>
+      </h2>
+    </div>
+
+    <a
+      href="javascript:void(0)"
+      class="coffee animate__animated animate__fadeIn animate__delay-5s"
+      ><img src="../../../../../assets/img/svg/coffee.svg" alt="coffee"
+    /></a>
+    <div id="bottomBar"></div>
+  </div>
 </div>
