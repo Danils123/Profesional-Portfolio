@@ -1,11 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent implements OnInit, AfterViewInit {
+  @Input() hideBottomBar: boolean = false;
+  @ViewChild('banner') banner: ElementRef;
+  @Output() sizeBanner: EventEmitter<number> = new EventEmitter<number>();
   public titleA: string = '';
   public titleB: string = '';
   public subTitle: string = '';
@@ -19,6 +31,10 @@ export class BannerComponent implements OnInit {
 
   constructor() {}
 
+  ngAfterViewInit() {
+    this.sizeBanner.emit(this.banner.nativeElement.offsetHeight);
+  }
+
   activeAnimation() {
     this.titleA = '';
     this.titleB = '';
@@ -30,7 +46,6 @@ export class BannerComponent implements OnInit {
       if (index !== this.textList.length - 1) {
         time = this.textList[index + 1].length * this.timeBetweenCharacters;
       }
-      console.log(time);
     });
   }
 

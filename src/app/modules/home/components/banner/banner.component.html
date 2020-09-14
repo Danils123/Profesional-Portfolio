@@ -1,4 +1,4 @@
-<div class="b-dark w100 h100" id="container">
+<div class="b-dark w100 h100" id="container" #banner>
   <div id="numbers" class="w100 h100">
     <div class="container has-text-centered w100 h100" id="copy">
       <h1>
@@ -31,6 +31,20 @@
       class="coffee animate__animated animate__fadeIn animate__delay-5s"
       ><img src="../../../../../assets/img/svg/coffee.svg" alt="coffee"
     /></a>
-    <div id="bottomBar"></div>
+    <div
+      class="animate__animated"
+      [ngClass]="{
+        animate__fadeOut: hideBottomBar,
+        animate__fadeIn: !hideBottomBar
+      }"
+      id="bottomBar"
+    ></div>
+    <!-- <div
+      [ngClass]="{
+        'animate__animated animate__fadeOut': hideBottomBar,
+        'animate__animated animate__fadeIn': !hideBottomBar
+      }"
+      id="bottomBar"
+    ></div> -->
   </div>
 </div>

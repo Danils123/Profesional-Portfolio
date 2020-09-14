@@ -1,1 +1,43 @@
-<p>header works!</p>
+<div class="w100" id="headerContainer">
+  <nav
+    class="navbar navbar-center"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <div class="navbar-brand">
+      <a class="navbar-item brand" href="javascript:void(0)">
+        <img width="50" height="150" />
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="menu">
+      <div class="start">
+        <a href="javascript:void(0)">About me</a>
+        <a href="javascript:void(0)">Experience</a>
+        <a href="javascript:void(0)">Projects</a>
+        <a href="javascript:void(0)">Blogs</a>
+        <a href="javascript:void(0)">Contact me</a>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="animate__animated"
+    [ngClass]="{
+      animate__fadeOut: hideBottomBar,
+      'animate__fadeIn animate__delay-0-4s': !hideBottomBar
+    }"
+    id="bottomBarH"
+  ></div>
+</div>

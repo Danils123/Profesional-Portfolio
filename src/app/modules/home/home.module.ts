@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/main/home.component';
 import { RouterModule } from '@angular/router';
@@ -9,6 +9,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactmeComponent } from './components/contactme/contactme.component';
 import { UnderconstructionModule } from '../underconstruction/underconstruction.module';
+import { CoreModule } from '../../core/core.module';
+import { AngularStickyThingsModule } from '@w11k/angular-sticky-things';
+import { WINDOW_PROVIDERS } from '../../core/services/scroll.service';
 
 @NgModule({
   declarations: [
@@ -20,10 +23,14 @@ import { UnderconstructionModule } from '../underconstruction/underconstruction.
     ContactmeComponent,
   ],
   imports: [
+    CoreModule,
     CommonModule,
     UnderconstructionModule,
     RouterModule.forRoot(HOMEROUTES),
+    AngularStickyThingsModule,
   ],
   exports: [RouterModule],
+  providers: [WINDOW_PROVIDERS],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeModule {}

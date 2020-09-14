@@ -1,0 +1,48 @@
+@import "../../../assets/scss/partials/variables.scss";
+
+.navbar {
+  background-color: $dark-background;
+}
+
+.navbar-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  img {
+    content: url("../../../assets/img/svg/coffeeOnly.svg");
+  }
+  img:hover {
+    content: url("../../../assets/img/svg/coffeeOnlyRed.svg");
+  }
+
+  color: white;
+  text-decoration: none;
+}
+
+#bottomBarH {
+  position: absolute;
+  height: 0.8rem;
+  width: 100%;
+  background-color: $contrast;
+}
+
+.animate__delay-0-4s {
+  animation-delay: 0.4s;
+}
+
+.start {
+  a {
+    font-size: large;
+    color: white;
+    margin-right: 2rem;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $contrast;
+  }
+}

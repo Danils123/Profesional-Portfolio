@@ -1,7 +1,23 @@
-<app-banner></app-banner>
-<!-- <app-aboutme></app-aboutme>
-<app-projects></app-projects>
-<app-experience></app-experience>
-<app-contactme></app-contactme> -->
+<app-banner
+  #banner
+  (sizeBanner)="setBannerSize($event)"
+  [hideBottomBar]="hideBar"
+></app-banner>
 
-<!-- <app-underconstruction></app-underconstruction> -->
+<div #content class="h100">
+  <app-header [hideBottomBar]="!hideBar" *ngIf="!enableSticky"></app-header>
+  <app-header
+    *ngIf="enableSticky"
+    class="animate__animated animate__fadeIn"
+    stickyThing
+    [spacer]="spacer"
+    [boundary]="content"
+    [enable]="enableSticky"
+  ></app-header>
+  <main #spacer>
+    <app-aboutme></app-aboutme>
+    <app-projects></app-projects>
+    <app-experience></app-experience>
+    <app-contactme></app-contactme>
+  </main>
+</div>

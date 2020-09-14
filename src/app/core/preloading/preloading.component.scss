@@ -1,0 +1,117 @@
+@import "../../../assets/scss/partials/variables.scss";
+
+$loadingSize: 53.6875rem;
+@mixin content($color-default) {
+  background: $color-default;
+}
+
+.day {
+  @include content(white);
+}
+
+.night {
+  @include content($dark-background);
+}
+
+.displayNone {
+  display: none;
+}
+
+.animate__delay-0-4s {
+  animation-delay: 0.4s;
+}
+
+.background {
+  overflow: hidden;
+  transition: background 1000ms ease-in-out, color 1000ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    width: $loadingSize;
+    p {
+      align-self: flex-start;
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      color: #bdbdbd;
+    }
+  }
+
+  .programmer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $loadingSize;
+    height: 21rem;
+    // height: 7, 651.083333333333rem;
+
+    .time {
+      position: absolute;
+      img {
+        height: 6rem;
+      }
+
+      .sun {
+        -webkit-animation: spin 15s linear infinite;
+        -moz-animation: spin 15s linear infinite;
+        animation: spin 15s linear infinite;
+      }
+    }
+
+    img {
+      width: 15rem;
+    }
+  }
+
+  .loading {
+    div:first-child {
+      width: $loadingSize;
+      height: 1.375rem;
+
+      background: #c4c4c4;
+      border-radius: 1.0625rem;
+      div {
+        background: $base;
+        border-radius: 1.0625rem;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: load;
+      }
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+
+  87.5% {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
