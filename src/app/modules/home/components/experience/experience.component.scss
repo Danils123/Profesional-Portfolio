@@ -1,0 +1,28 @@
+@import "../../../../../assets/scss/partials/variables.scss";
+
+.contrast {
+  background-color: $contrast;
+  color: white;
+}
+
+.blue {
+  background-color: $blue;
+  color: white;
+}
+
+.yellow {
+  background-color: $yellow !important;
+  border-color: $yellow !important;
+}
+
+.container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title.is-2 {
+    margin-bottom: 3rem;
+  }
+}

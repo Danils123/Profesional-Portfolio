@@ -1,0 +1,34 @@
+@import "../../../../../assets/scss/partials/variables.scss";
+
+.aboutme {
+  .who {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      //   max-width: 40%;
+      text-align: center;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile {
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 5rem;
+  }
+  p {
+    strong {
+      color: $contrast;
+    }
+  }
+}
