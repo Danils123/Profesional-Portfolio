@@ -8,29 +8,25 @@
         <!--  animate__delay-1s -->
         <img
           class="animate__animated sun"
-          src=".././../../assets/img/svg/sun.svg"
+          src="assets/img/svg/sun.svg"
           alt=""
         />
       </div>
 
       <div [class]="'time animate__animated' + classesMoon" *ngIf="!isDay">
-        <img
-          class="animate__animated"
-          src=".././../../assets/img/svg/moon.svg"
-          alt=""
-        />
+        <img class="animate__animated" src="assets/img/svg/moon.svg" alt="" />
       </div>
     </div>
     <div class="level">
       <img
         [ngClass]="{ displayNone: !programmerBlue }"
-        src=".././../../assets/img/svg/programmerDay.svg"
+        src="assets/img/svg/programmerDay.svg"
         alt=""
       />
       <img
         [ngClass]="{ displayNone: programmerBlue }"
         *ngIf="!isDay"
-        src=".././../../assets/img/svg/programmerNight.svg"
+        src="assets/img/svg/programmerNight.svg"
         alt=""
       />
     </div>
