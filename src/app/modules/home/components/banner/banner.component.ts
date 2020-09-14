@@ -24,7 +24,7 @@ export class BannerComponent implements OnInit, AfterViewInit {
   public textList = [
     'Hello, I’m',
     'Daniel Ramírez',
-    'I’m front end web developer',
+    'I’m a front end web developer',
   ];
 
   private timeBetweenCharacters = 90;
