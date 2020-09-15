@@ -1,6 +1,6 @@
 <app-banner
   #banner
-  (sizeBanner)="setBannerSize($event)"
+  (sizeBanner)="bannerSize = $event"
   [hideBottomBar]="hideBar"
 ></app-banner>
 
@@ -15,10 +15,14 @@
     [enable]="enableSticky"
   ></app-header>
   <main #spacer>
-    <app-aboutme></app-aboutme>
-    <app-projects></app-projects>
-    <app-experience class="spacing"></app-experience>
-    <app-contactme></app-contactme>
+    <app-aboutme (size)="aboutmeSize = $event" #aboutme></app-aboutme>
+    <app-projects (size)="projectsSize = $event" #project></app-projects>
+    <app-experience
+      (size)="experienceSize = $event"
+      #experience
+      class="spacing"
+    ></app-experience>
+    <app-contactme (size)="contactmeSize = $event" #resume></app-contactme>
     <app-footer></app-footer>
   </main>
 </div>

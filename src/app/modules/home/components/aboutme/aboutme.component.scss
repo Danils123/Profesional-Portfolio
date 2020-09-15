@@ -1,23 +1,52 @@
 @import "../../../../../assets/scss/partials/variables.scss";
 
+li {
+  display: flex;
+  width: 100%;
+  // justify-content: space-between;
+  .iconSS {
+    max-width: 1rem;
+  }
+}
+
 .aboutme {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   .who {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 4rem;
+    h1 {
+      margin-top: 2rem;
+    }
     p {
-      //   max-width: 40%;
+      max-width: 60%;
       text-align: center;
     }
   }
 
   .skills {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .items {
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      justify-content: space-around;
+      ul {
+        width: 25%;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+      }
+    }
   }
 
   .profile {

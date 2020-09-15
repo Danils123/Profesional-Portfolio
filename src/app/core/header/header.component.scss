@@ -23,6 +23,17 @@
   text-decoration: none;
 }
 
+.contrast {
+  color: $contrast !important;
+}
+
+.brandContrast {
+  img {
+    content: url("../../../assets/img/svg/coffeeOnlyRed.svg");
+  }
+  // content: url("../../../assets/img/svg/coffeeOnlyRed.svg");
+}
+
 #bottomBarH {
   position: absolute;
   height: 0.8rem;

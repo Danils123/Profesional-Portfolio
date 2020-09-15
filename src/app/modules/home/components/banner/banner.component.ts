@@ -1,3 +1,5 @@
+import { NavegatorService } from '../../../../core/services/navegator.service';
+import { Navegators } from '../../../../shared/enums/navegators.enum';
 import {
   AfterViewInit,
   Component,
@@ -16,7 +18,9 @@ import {
 })
 export class BannerComponent implements OnInit, AfterViewInit {
   @Input() hideBottomBar: boolean = false;
-  @ViewChild('banner') banner: ElementRef;
+  @ViewChild('banner', { static: true }) public banner: ElementRef<
+    HTMLDivElement
+  >;
   @Output() sizeBanner: EventEmitter<number> = new EventEmitter<number>();
   public titleA: string = '';
   public titleB: string = '';
@@ -29,10 +33,22 @@ export class BannerComponent implements OnInit, AfterViewInit {
 
   private timeBetweenCharacters = 90;
 
-  constructor() {}
+  constructor(private nav: NavegatorService) {}
 
   ngAfterViewInit() {
     this.sizeBanner.emit(this.banner.nativeElement.offsetHeight);
+  }
+
+  ngOnInit(): void {
+    this.nav.getObservable().subscribe((to) => {
+      if (to === Navegators.BANNER) {
+        this.moveToBanner();
+      }
+    });
+
+    setTimeout(() => {
+      this.activeAnimation();
+    }, 1000);
   }
 
   activeAnimation() {
@@ -47,12 +63,6 @@ export class BannerComponent implements OnInit, AfterViewInit {
         time = this.textList[index + 1].length * this.timeBetweenCharacters;
       }
     });
-  }
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.activeAnimation();
-    }, 1000);
   }
 
   typeWriter(text: string, type: number) {
@@ -71,5 +81,17 @@ export class BannerComponent implements OnInit, AfterViewInit {
         }
       }, index * this.timeBetweenCharacters);
     });
+  }
+
+  moveToBanner(): void {
+    this.banner.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
+  }
+
+  moveToAboutme(): void {
+    this.nav.moveTo(Navegators.ABOUTME);
   }
 }

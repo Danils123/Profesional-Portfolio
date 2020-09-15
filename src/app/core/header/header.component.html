@@ -5,7 +5,12 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <a class="navbar-item brand" href="javascript:void(0)">
+      <a
+        class="navbar-item brand"
+        href="javascript:void(0)"
+        [ngClass]="{ brandContrast: bannerClicked }"
+        (click)="moveTo(1)"
+      >
         <img width="50" height="150" />
       </a>
 
@@ -24,11 +29,32 @@
 
     <div class="menu">
       <div class="start">
-        <a href="javascript:void(0)">About me</a>
-        <a href="javascript:void(0)">Experience</a>
-        <a href="javascript:void(0)">Projects</a>
-        <a href="javascript:void(0)">Blogs</a>
-        <a href="javascript:void(0)">Resume</a>
+        <a
+          href="javascript:void(0)"
+          (click)="moveTo(2)"
+          [ngClass]="{ contrast: aboutmeClicked }"
+          >About me</a
+        >
+
+        <a
+          href="javascript:void(0)"
+          (click)="moveTo(4)"
+          [ngClass]="{ contrast: projectsClicked }"
+          >Projects</a
+        >
+        <a
+          href="javascript:void(0)"
+          (click)="moveTo(3)"
+          [ngClass]="{ contrast: experienceClicked }"
+          >Experience</a
+        >
+        <!-- <a href="javascript:void(0)" (click)="moveTo()" [ngClass]="{contrast: blogsClicked}">Blogs</a> -->
+        <a
+          href="javascript:void(0)"
+          (click)="moveTo(6)"
+          [ngClass]="{ contrast: resumeClicked }"
+          >Resume</a
+        >
       </div>
     </div>
   </nav>
