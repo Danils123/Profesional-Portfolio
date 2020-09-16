@@ -12,6 +12,8 @@ import { UnderconstructionModule } from '../underconstruction/underconstruction.
 import { CoreModule } from '../../core/core.module';
 import { AngularStickyThingsModule } from '@w11k/angular-sticky-things';
 import { WINDOW_PROVIDERS } from '../../core/services/scroll.service';
+import { GridComponent } from './components/projects/grid/grid.component';
+import { CardComponent } from './components/projects/card/card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { WINDOW_PROVIDERS } from '../../core/services/scroll.service';
     ProjectsComponent,
     ExperienceComponent,
     ContactmeComponent,
+    GridComponent,
+    CardComponent,
   ],
   imports: [
     CoreModule,

@@ -11,16 +11,19 @@
     class="animate__animated animate__fadeIn"
     stickyThing
     [spacer]="spacer"
-    [boundary]="content"
     [enable]="enableSticky"
   ></app-header>
   <main #spacer>
     <app-aboutme (size)="aboutmeSize = $event" #aboutme></app-aboutme>
-    <app-projects (size)="projectsSize = $event" #project></app-projects>
+    <app-projects
+      class="h100"
+      (size)="projectsSize = $event"
+      #project
+    ></app-projects>
     <app-experience
       (size)="experienceSize = $event"
       #experience
-      class="spacing"
+      class=""
     ></app-experience>
     <app-contactme (size)="contactmeSize = $event" #resume></app-contactme>
     <app-footer></app-footer>

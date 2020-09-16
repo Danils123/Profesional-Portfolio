@@ -1,0 +1,114 @@
+@import "../../../../../../assets/scss/partials/variables.scss";
+
+.element {
+  width: 23.3rem;
+  height: 21.3rem;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+
+  // background-image: url(../../../../../../assets/img/asterius.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+
+  .fon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.25s;
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    background: $grey;
+
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 0px 0 0;
+    z-index: 4;
+    // transition: height 0.25s, padding 0.25s;
+    transition: opacity 0.5s;
+  }
+  h2 {
+    font-size: 2rem;
+    transform: translateY(-300px);
+    transition: transform 1s;
+    // text-transform: uppercase;
+    color: black;
+    z-index: 5;
+  }
+
+  .view {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 2px solid $contrast;
+    font-size: 13pt;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    color: black;
+    z-index: 5;
+    transform: translateY(300px);
+    transition: transform 1s, background-color 0.5s, border 0.5s, color 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .view:hover {
+    border: 2px solid $contrast !important;
+    border: none;
+    background-color: $contrast;
+    color: white;
+  }
+
+  p {
+    color: $contrast;
+    transform: translateY(-300px);
+    transition: transform 1s;
+    line-height: 20px;
+    z-index: 4;
+  }
+}
+
+.element:hover {
+  .fon {
+    opacity: 0.3;
+  }
+  .text {
+    opacity: 1;
+  }
+  h2 {
+    transform: translateY(95px);
+  }
+  p {
+    transform: translateY(100px);
+  }
+  .view {
+    transform: translateY(100%);
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-10rem {
+  height: 28rem;
+}

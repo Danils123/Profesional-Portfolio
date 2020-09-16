@@ -1,5 +1,12 @@
 @import "../../../../../assets/scss/partials/variables.scss";
 
 .bg-grey {
+  min-height: 40rem;
   background-color: $grey;
+  .container {
+    padding: 7rem;
+    h1 {
+      margin-bottom: 5rem;
+    }
+  }
 }
