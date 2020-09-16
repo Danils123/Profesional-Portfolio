@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './modules/home/home.module';
 import { UnderconstructionModule } from './modules/underconstruction/underconstruction.module';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { UnderconstructionModule } from './modules/underconstruction/underconstr
     BrowserModule,
     RouterModule,
     CoreModule,
+    SnotifyModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,9 +1,9 @@
+<ng-snotify></ng-snotify>
 <app-banner
   #banner
   (sizeBanner)="bannerSize = $event"
   [hideBottomBar]="hideBar"
 ></app-banner>
-
 <div #content class="h100">
   <app-header [hideBottomBar]="!hideBar" *ngIf="!enableSticky"></app-header>
   <app-header

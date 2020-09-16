@@ -14,6 +14,9 @@ import { AngularStickyThingsModule } from '@w11k/angular-sticky-things';
 import { WINDOW_PROVIDERS } from '../../core/services/scroll.service';
 import { GridComponent } from './components/projects/grid/grid.component';
 import { CardComponent } from './components/projects/card/card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,17 @@ import { CardComponent } from './components/projects/card/card.component';
     UnderconstructionModule,
     RouterModule.forRoot(HOMEROUTES),
     AngularStickyThingsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    SnotifyModule,
   ],
   exports: [RouterModule],
-  providers: [WINDOW_PROVIDERS],
+  providers: [
+    WINDOW_PROVIDERS,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    SnotifyService,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeModule {}
