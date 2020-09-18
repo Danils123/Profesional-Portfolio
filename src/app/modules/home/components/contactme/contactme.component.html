@@ -1,10 +1,30 @@
 <div class="shape" #resume>
   <div class="content w100">
-    <h1 class="title is-2 is-white mb-3">{{ "RESUME" | uppercase }}</h1>
-    <h3 class="subtitle is-5 is-white">
+    <h1
+      class="title is-2 is-white mb-3"
+      data-aos="fade"
+      data-aos-easing="ease-in-out"
+      data-aos-duration="700"
+    >
+      {{ "RESUME" | uppercase }}
+    </h1>
+    <h3
+      class="subtitle is-5 is-white"
+      data-aos="fade"
+      data-aos-easing="ease-in-out"
+      data-aos-duration="500"
+    >
       Would you like me to send you my resume?
     </h3>
-    <form [formGroup]="contactmeForm" (onSubmit)="sendMail()" class="w50">
+    <form
+      [formGroup]="contactmeForm"
+      (onSubmit)="sendMail()"
+      class="w50"
+      data-aos="fade"
+      data-aos-easing="linear"
+      data-aos-duration="700"
+      data-aos-once="true"
+    >
       <div class="w100">
         <div class="field">
           <div class="control">

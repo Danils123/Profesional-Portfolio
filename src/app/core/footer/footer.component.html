@@ -1,5 +1,26 @@
 <div class="footerContainer">
-  <img src="assets/img/svg/in.svg" alt="" />
-  <img src="assets/img/svg/github.svg" alt="" />
-  <img src="assets/img/svg/sobre.svg" alt="" />
+  <div
+    id="in_container"
+    class="image_container"
+    (click)="redirect('https://www.linkedin.com/in/daniel-barrientos-79351ab9')"
+  >
+    <img src="assets/img/svg/in.svg" alt="" />
+    <img src="assets/img/svg/inHover.svg" alt="" />
+  </div>
+  <div
+    id="github_container"
+    class="image_container"
+    (click)="redirect('https://github.com/Danils123')"
+  >
+    <img src="assets/img/svg/github.svg" alt="" />
+    <img src="assets/img/svg/githubHover.svg" alt="" />
+  </div>
+  <div
+    id="sobre_container"
+    class="image_container"
+    (click)="redirect('mailto:barrientosd9@gmail.com')"
+  >
+    <img src="assets/img/svg/sobre.svg" alt="" />
+    <img src="assets/img/svg/sobreHover.svg" alt="" />
+  </div>
 </div>

@@ -8,21 +8,44 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  .image_container {
+    img {
+      width: 2.6rem;
+      cursor: pointer;
+    }
+    img:nth-child(2) {
+      display: none;
+    }
+  }
+  .image_container:nth-child(2) {
+    img {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+#sobre_container:hover {
   img {
-    max-width: 2.6rem;
-    cursor: pointer;
+    display: none;
   }
   img:nth-child(2) {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    display: inline;
   }
-  img:nth-child(2):hover {
-    content: url("../../../assets/img/svg/githubHover.svg");
+}
+#in_container:hover {
+  img {
+    display: none;
   }
-  img:nth-child(1):hover {
-    content: url("../../../assets/img/svg/inHover.svg");
+  img:nth-child(2) {
+    display: inline;
   }
-  img:nth-child(3):hover {
-    content: url("../../../assets/img/svg/sobreHover.svg");
+}
+#github_container:hover {
+  img {
+    display: none;
+  }
+  img:nth-child(2) {
+    display: inline;
   }
 }
