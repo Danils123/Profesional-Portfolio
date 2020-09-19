@@ -150,3 +150,17 @@ span {
     transform: translate3d(0, -4px, 0) scaleY(1.02);
   }
 }
+
+@media screen and (max-width: 1023px) {
+  #numbers #copy {
+    h1 {
+      font-size: 1.72rem;
+      p {
+        text-align: center;
+      }
+    }
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+}

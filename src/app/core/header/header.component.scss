@@ -1,14 +1,28 @@
 @import "../../../assets/scss/partials/variables.scss";
 
-.navbar {
+.navbar,
+.navbar-start {
   background-color: $dark-background;
 }
-
-.navbar-center {
-  display: flex;
-  flex-direction: row;
+.navbar {
   justify-content: center;
-  align-items: center;
+}
+
+.navbar-menu {
+  max-width: fit-content;
+  padding: 0rem 0;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+.navbar-item {
+  color: white;
+}
+.navbar-item:hover {
+  color: $contrast;
+  background-color: transparent;
 }
 
 .brand {
@@ -31,7 +45,6 @@
   img {
     content: url("../../../assets/img/svg/coffeeOnlyRed.svg");
   }
-  // content: url("../../../assets/img/svg/coffeeOnlyRed.svg");
 }
 
 #bottomBarH {
@@ -45,16 +58,9 @@
   animation-delay: 0.4s;
 }
 
-.start {
-  a {
-    font-size: large;
-    color: white;
-    margin-right: 3.5rem;
-    margin-left: 3.5rem;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: $contrast;
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    max-width: 100%;
+    padding: 0rem 0;
   }
 }

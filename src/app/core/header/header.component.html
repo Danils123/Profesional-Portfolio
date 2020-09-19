@@ -1,4 +1,4 @@
-<div class="w100" id="headerContainer">
+<!-- <div class="w100" id="headerContainer">
   <nav
     class="navbar navbar-center"
     role="navigation"
@@ -48,22 +48,95 @@
           [ngClass]="{ contrast: experienceClicked }"
           >Experience</a
         >
-        <!-- <a href="javascript:void(0)" (click)="moveTo()" [ngClass]="{contrast: blogsClicked}">Blogs</a> -->
         <a
-          href="javascript:void(0)"
-          (click)="moveTo(6)"
-          [ngClass]="{ contrast: resumeClicked }"
-          >Resume</a
+        href="javascript:void(0)"
+        (click)="moveTo(6)"
+        [ngClass]="{ contrast: resumeClicked }"
+        >Resume</a
         >
       </div>
     </div>
   </nav>
   <div
-    class="animate__animated"
-    [ngClass]="{
-      animate__fadeOut: hideBottomBar,
-      'animate__fadeIn animate__delay-0-4s': !hideBottomBar
-    }"
-    id="bottomBarH"
+  class="animate__animated"
+  [ngClass]="{
+    animate__fadeOut: hideBottomBar,
+    'animate__fadeIn animate__delay-0-4s': !hideBottomBar
+  }"
+  id="bottomBarH"
   ></div>
-</div>
+</div> -->
+
+<!-- <a href="javascript:void(0)" (click)="moveTo()" [ngClass]="{contrast: blogsClicked}">Blogs</a> -->
+
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a
+      class="navbar-item brand"
+      href="javascript:void(0)"
+      [ngClass]="{ brandContrast: bannerClicked }"
+      (click)="moveTo(1)"
+    >
+      <img width="50" height="150" />
+    </a>
+
+    <a
+      [ngClass]="{ 'is-active': isActive }"
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+      (click)="isActive = !isActive"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div
+    id="navbarBasicExample"
+    class="navbar-menu"
+    [ngClass]="{ 'is-active': isActive }"
+  >
+    <div class="navbar-start">
+      <a
+        class="navbar-item is-size-5 mx-2"
+        (click)="moveTo(2)"
+        [ngClass]="{ contrast: aboutmeClicked }"
+      >
+        About me
+      </a>
+      <a
+        class="navbar-item is-size-5 mx-2"
+        (click)="moveTo(4)"
+        [ngClass]="{ contrast: projectsClicked }"
+      >
+        Projects
+      </a>
+      <a
+        class="navbar-item is-size-5 mx-2"
+        (click)="moveTo(3)"
+        [ngClass]="{ contrast: experienceClicked }"
+      >
+        Experience
+      </a>
+      <a
+        class="navbar-item is-size-5 mx-2"
+        (click)="moveTo(6)"
+        [ngClass]="{ contrast: resumeClicked }"
+      >
+        Resume
+      </a>
+    </div>
+  </div>
+</nav>
+<div
+  class="animate__animated"
+  [ngClass]="{
+    animate__fadeOut: hideBottomBar,
+    'animate__fadeIn animate__delay-0-4s': !hideBottomBar
+  }"
+  id="bottomBarH"
+></div>
