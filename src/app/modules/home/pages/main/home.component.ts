@@ -73,6 +73,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
     ) {
       this.nav.changeColor(Navegators.EXPERIENCE);
     } else {
+      this.enableSticky = false;
       this.nav.changeColor(Navegators.RESUME);
     }
   }

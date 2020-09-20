@@ -69,7 +69,12 @@
 
 <!-- <a href="javascript:void(0)" (click)="moveTo()" [ngClass]="{contrast: blogsClicked}">Blogs</a> -->
 
-<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+<nav
+  class="navbar is-spaced is-fixed-top"
+  role="navigation"
+  aria-label="main navigation"
+  [ngClass]="{ 'is-fixed-top': enableSticky }"
+>
   <div class="navbar-brand">
     <a
       class="navbar-item brand"
@@ -136,7 +141,8 @@
   class="animate__animated"
   [ngClass]="{
     animate__fadeOut: hideBottomBar,
-    'animate__fadeIn animate__delay-0-4s': !hideBottomBar
+    'animate__fadeIn animate__delay-0-4s': !hideBottomBar,
+    fixed_top: enableSticky
   }"
   id="bottomBarH"
 ></div>

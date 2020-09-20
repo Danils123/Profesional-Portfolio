@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './modules/home/home.module';
 import { UnderconstructionModule } from './modules/underconstruction/underconstruction.module';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     CoreModule,
     SnotifyModule,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

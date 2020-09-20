@@ -48,3 +48,12 @@
 .w50 {
   width: 50%;
 }
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    max-width: 100%;
+    padding: 0rem 0;
+  }
+  .fixed_top {
+    top: 3.25rem;
+  }
+}

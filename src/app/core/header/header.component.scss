@@ -54,6 +54,14 @@
   background-color: $contrast;
 }
 
+.fixed_top {
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  z-index: 30;
+  top: 5.2rem;
+}
+
 .animate__delay-0-4s {
   animation-delay: 0.4s;
 }
@@ -62,5 +70,8 @@
   .navbar-menu {
     max-width: 100%;
     padding: 0rem 0;
+  }
+  .fixed_top {
+    top: 3.25rem;
   }
 }

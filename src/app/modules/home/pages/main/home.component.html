@@ -5,13 +5,9 @@
   [hideBottomBar]="hideBar"
 ></app-banner>
 <div #content class="h100">
-  <app-header [hideBottomBar]="!hideBar" *ngIf="!enableSticky"></app-header>
   <app-header
-    *ngIf="enableSticky"
-    class="animate__animated animate__fadeIn"
-    stickyThing
-    [spacer]="spacer"
-    [enable]="enableSticky"
+    [hideBottomBar]="!hideBar"
+    [enableSticky]="enableSticky"
   ></app-header>
   <main #spacer>
     <app-aboutme (size)="aboutmeSize = $event" #aboutme></app-aboutme>

@@ -9,6 +9,7 @@ import { Navegators } from '../../shared/enums/navegators.enum';
 })
 export class HeaderComponent implements OnInit {
   @Input() hideBottomBar: boolean = false;
+  @Input() enableSticky: boolean = false;
 
   public isActive: boolean = false;
   public bannerClicked: boolean = true;

@@ -69,7 +69,7 @@ $loadingSize: 53.6875rem;
   .loading {
     div:first-child {
       width: $loadingSize;
-      height: 1.375rem;
+      height: 1rem;
 
       background: #c4c4c4;
       border-radius: 1.0625rem;
@@ -113,5 +113,14 @@ $loadingSize: 53.6875rem;
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .loading div:first-child,
+  .background .loading div:first-child,
+  .background .programmer,
+  .background .text {
+    width: 19.6875rem;
   }
 }
