@@ -2,8 +2,9 @@ export interface ICard {
   name: string;
   descriptions: string;
   url: string;
-  image: string;
+  images: string[];
   longDescription?: string;
+  tags?: string[];
 }
 
 export class Card implements ICard {
@@ -11,7 +12,8 @@ export class Card implements ICard {
     public name: string,
     public descriptions: string,
     public url: string,
-    public image: string,
-    public longDescription?: string
+    public images: string[],
+    public longDescription?: string,
+    public tags?: string[]
   ) {}
 }

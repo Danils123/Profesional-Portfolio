@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   EventEmitter,
+  Input,
   OnInit,
   Output,
   ViewChild,
@@ -20,6 +21,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     HTMLDivElement
   >;
   @Output() size: EventEmitter<number> = new EventEmitter<number>();
+  @Input() headerSize: number = 0;
   constructor(private nav: NavegatorService) {}
 
   ngOnInit(): void {

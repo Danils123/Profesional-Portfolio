@@ -1,0 +1,34 @@
+/* external css: flickity.css */
+@import "../../../../../../assets/scss/partials/variables.scss";
+.gallery {
+  background: #eee;
+}
+.bg-grey {
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-cell {
+  width: 100%;
+  height: 20rem;
+  margin-right: 10px;
+  //   background: #8c8;
+  //   counter-increment: gallery-cell;
+}
+
+/* cell number */
+// .gallery-cell:before {
+//   display: block;
+//   text-align: center;
+// //   content: counter(gallery-cell);
+//   line-height: 200px;
+//   font-size: 80px;
+//   color: white;
+// }

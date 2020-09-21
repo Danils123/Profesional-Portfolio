@@ -6,8 +6,9 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './modules/home/home.module';
 import { UnderconstructionModule } from './modules/underconstruction/underconstruction.module';
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { SnotifyModule } from 'ng-snotify';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     RouterModule,
     CoreModule,
     SnotifyModule,
+    NoopAnimationsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

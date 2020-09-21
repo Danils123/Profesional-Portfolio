@@ -17,7 +17,7 @@ import { CardComponent } from './components/projects/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
-
+import { DetailComponent } from './components/projects/detail/detail.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -28,6 +28,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     ContactmeComponent,
     GridComponent,
     CardComponent,
+    DetailComponent,
   ],
   imports: [
     CoreModule,
