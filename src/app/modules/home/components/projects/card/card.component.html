@@ -14,7 +14,16 @@
     <p class="center">{{ data.descriptions }}</p>
     <div class="triangle"></div>
   </div>
-  <div class="view" [routerLink]="['/project/detail', 1]">View More</div>
+  <div
+    class="view"
+    [routerLink]="['/project/detail', 1]"
+    [state]="{
+      data: data,
+      headerSize: headerSize
+    }"
+  >
+    View More
+  </div>
 </div>
 
 <!-- <div class="modal" [ngClass]="{ 'is-active': displayModal }">

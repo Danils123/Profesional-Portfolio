@@ -1,12 +1,6 @@
-<app-header
-  class="h100"
-  [hideBottomBar]="false"
-  [enableSticky]="true"
-></app-header>
-
-<div [ngStyle]="{ 'padding-top': headerSize + 'px' }" class="bg-grey h100 w100">
-  <div class="container h100 w100 pb-5">
-    <div class="columns w100 px-5">
+<div class="bg-grey w100 h100">
+  <div class="container">
+    <div class="columns w100 ">
       <div class="column">
         <h1 class="title">{{ data.name }}</h1>
         <p>{{ data.longDescription }}</p>
@@ -21,12 +15,6 @@
           class="gallery js-flickity"
           data-flickity-options='{ "wrapAround": true }'
         >
-          <!-- <img
-                        [src]="'assets/img/' + image"
-                        *ngFor="let image of data.images"
-                        alt=""
-                        class="gallery-cell image is-128x128"
-                      /> -->
           <figure class="image is-5by3 w100" *ngFor="let image of data.images">
             <img [src]="'assets/img/' + image" />
           </figure>

@@ -6,6 +6,7 @@
 ></app-banner>
 <div #content class="h100">
   <app-header
+    (size)="headerSize = $event"
     [hideBottomBar]="!hideBar"
     [enableSticky]="enableSticky"
   ></app-header>
@@ -14,6 +15,7 @@
     <app-projects
       class="h100"
       (size)="projectsSize = $event"
+      [headerSize]="headerSize"
       #project
     ></app-projects>
     <app-experience

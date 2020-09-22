@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 import { Card } from '../../../../../shared/models/Card.model';
 
 @Component({
@@ -7,8 +10,9 @@ import { Card } from '../../../../../shared/models/Card.model';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  @Input() headerSize: number = 130;
-  @Input() data: Card = new Card(
+  private state$: Observable<object>;
+  headerSize: number = 130;
+  data: Card = new Card(
     'Asterious',
     'Angular / Firebase / CSS',
     'https://danils123.github.io/spaceTravel/#/',
@@ -16,7 +20,13 @@ export class DetailComponent implements OnInit {
     'Application in order to show scroll effects and a preloading.',
     ['Angular', 'Firebase', 'Css', 'Angular Material']
   );
-  constructor() {}
+  constructor(public router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.state$ = this.router.events.pipe(
+      filter((e) => e instanceof NavigationStart),
+      map(() => this.router.getCurrentNavigation().extras.state)
+    );
+    this.state$.subscribe((x) => console.log(x));
+  }
 }

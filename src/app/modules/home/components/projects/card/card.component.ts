@@ -7,6 +7,7 @@ import { Card } from 'src/app/shared/models/Card.model';
 })
 export class CardComponent implements OnInit {
   @Input() data: Card;
+  @Input() headerSize: number = 0;
   public displayModal: boolean = false;
 
   // public config: SwiperOptions = {

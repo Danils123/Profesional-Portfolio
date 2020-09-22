@@ -1,4 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { NavegatorService } from '../services/navegator.service';
 import { Navegators } from '../../shared/enums/navegators.enum';
 
@@ -10,7 +18,10 @@ import { Navegators } from '../../shared/enums/navegators.enum';
 export class HeaderComponent implements OnInit {
   @Input() hideBottomBar: boolean = false;
   @Input() enableSticky: boolean = false;
-
+  @Output() size: EventEmitter<number> = new EventEmitter<number>();
+  @ViewChild('header', { static: true }) public header: ElementRef<
+    HTMLDivElement
+  >;
   public isActive: boolean = false;
   public bannerClicked: boolean = true;
   public aboutmeClicked: boolean = false;
@@ -22,6 +33,7 @@ export class HeaderComponent implements OnInit {
   constructor(private nav: NavegatorService) {}
 
   ngOnInit(): void {
+    this.size.emit(this.header.nativeElement.offsetHeight);
     this.nav.getObservableColor().subscribe((nav) => this.changeColor(nav));
   }
 

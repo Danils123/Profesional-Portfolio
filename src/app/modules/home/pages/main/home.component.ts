@@ -18,6 +18,7 @@ import { Navegators } from 'src/app/shared/enums/navegators.enum';
 })
 export class HomeComponent implements OnInit, AfterContentInit {
   public enableSticky: boolean = false;
+  public headerSize: number = 0;
   public bannerSize: number = 0;
   public aboutmeSize: number = 0;
   public projectsSize: number = 0;
