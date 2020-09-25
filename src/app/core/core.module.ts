@@ -12,7 +12,9 @@ import { COREROUTES } from './core.routes';
   imports: [
     RouterModule,
     CommonModule,
-    RouterModule.forRoot(COREROUTES),
+    RouterModule.forRoot(COREROUTES, {
+    initialNavigation: 'enabled'
+}),
     AngularStickyThingsModule,
   ],
   exports: [HeaderComponent, FooterComponent, PreloadingComponent],
