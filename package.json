@@ -1,6 +1,5 @@
 {
   "name": "professional-portfolio",
-  "homepage": "https://danils123.github.io/Profesional-Portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
