@@ -15,7 +15,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     HomeModule,
     UnderconstructionModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     RouterModule,
     CoreModule,
     SnotifyModule,

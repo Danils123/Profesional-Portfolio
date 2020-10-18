@@ -34,9 +34,7 @@ import { DetailComponent } from './components/projects/detail/detail.component';
     CoreModule,
     CommonModule,
     UnderconstructionModule,
-    RouterModule.forRoot(HOMEROUTES, {
-    initialNavigation: 'enabled'
-}),
+    RouterModule.forRoot(HOMEROUTES),
     AngularStickyThingsModule,
     ReactiveFormsModule,
     FormsModule,
