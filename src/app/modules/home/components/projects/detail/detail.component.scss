@@ -1,6 +1,5 @@
 /* external css: flickity.css */
 @import "../../../../../../assets/scss/partials/variables.scss";
-@import "bulma";
 .gallery {
   background: #eee;
 }
@@ -28,7 +27,7 @@
   .column:first-child() {
     display: flex;
     flex-direction: column;
-    
+
     justify-content: center;
   }
 }
